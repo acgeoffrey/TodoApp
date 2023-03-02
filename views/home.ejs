@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/087af60db1.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/home.css" />
+  </head>
+  <body>
+    <div class="create-todo-full hidden">
+      <div class="ctf-div">
+        <h2 class="heading-two">Create a new task</h2>
+
+        <form action="/add-task" method="POST">
+          <label for="description">DESCRIPTION</label> <br />
+          <textarea
+            name="description"
+            id="description"
+            cols="150"
+            rows="10"
+          ></textarea>
+          <div class="form-cat-date">
+            <div>
+              <label for="category"> CATEGORY</label> <br />
+              <select name="category" id="category">
+                <option value="" disabled selected>Select your option</option>
+                <option value="personal">Personal</option>
+                <option value="school">School</option>
+                <option value="work">Work</option>
+                <option value="Others">Others</option>
+              </select>
+            </div>
+            <div>
+              <label for="date">DUE DATE</label> <br />
+              <input type="date" name="date" id="date" />
+            </div>
+          </div>
+          <div class="button-div">
+            <button type="submit" class="create-todo-short ctf-btn">
+              <i class="fa-solid fa-plus"></i>
+              <span>ADD TASK</span>
+            </button>
+            <button class="close-btn">
+              <i class="fa-solid fa-xmark"></i>
+              <span>Close</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <header>
+      <div>
+        <h1 class="header-text">TODO App</h1>
+      </div>
+    </header>
+    <main>
+      <div class="todo-content-div">
+        <ul>
+          <% for (let i of todo_items) { %>
+          <li>
+            <input type="checkbox" class="check-box" value="<%= i.id %>" />
+            <div class="todo-content">
+              <div class="des-date">
+                <p class="list-text"><%= i.description %></p>
+                <p class="date-text">
+                  <i class="fa-solid fa-calendar-days"></i><%= i.date %>
+                </p>
+              </div>
+
+              <p class="list-text tags"><%= i.category %></p>
+            </div>
+            <a href="/delete-task?id=<%= i.id %>" class="delete-icon hidden"
+              ><i class="fa-solid fa-trash"></i
+            ></a>
+          </li>
+          <% } %>
+        </ul>
+      </div>
+      <button class="create-todo-short cts-btn">
+        <i class="fa-solid fa-plus"></i>
+        <span>ADD TASK</span>
+      </button>
+    </main>
+    <script src="/js/home.js"></script>
+  </body>
+</html>

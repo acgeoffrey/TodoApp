@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #000000, #131313);
+}
+
+/******* HEADER *******/
+
+header {
+  width: 100%;
+  height: 30%;
+}
+
+header div {
+  height: 100%;
+  background: linear-gradient(to left, #c33764, #1d2671);
+  /* box-shadow: 0px 2px 6px 4px rgba(128, 128, 128, 0.616); */
+}
+
+.header-text {
+  color: white;
+  font-size: 5rem;
+  margin-left: 20%;
+  padding-top: 3rem;
+  letter-spacing: 2px;
+}
+
+/******* TODO Section *******/
+main {
+  color: white;
+  width: 70%;
+  height: 90%;
+  margin: 0 auto;
+  background: linear-gradient(to bottom, #232526, #37383a);
+  border-radius: 1.5rem;
+  position: absolute;
+  top: 13%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.todo-content-div {
+  width: 100%;
+  height: 100%;
+  margin-top: 2rem;
+  font-size: 2rem;
+  overflow: scroll;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.todo-content-div::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.todo-content-div {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.todo-content-div li {
+  display: flex;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.466);
+}
+
+.todo-content {
+  height: auto;
+  width: 100%;
+  /* background-color: red; */
+
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  gap: 2rem;
+}
+
+.des-date {
+  display: flex;
+  flex-direction: column;
+}
+
+.date-text {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.fa-calendar-days {
+  margin-right: 1rem;
+}
+
+.todo-content-div li {
+  list-style: none;
+}
+
+.check-box {
+  margin: auto 2rem;
+}
+
+.list-text {
+  margin: 1.5rem 0;
+}
+
+.tags {
+  padding: 0.5rem;
+  font-size: 1.6rem;
+  margin: auto 0px;
+  margin-right: 2rem;
+  border-radius: 2px;
+}
+
+.delete-icon {
+  color: white;
+  margin: auto 1rem;
+  margin-right: 3rem;
+}
+
+.create-todo-short {
+  padding: 1rem;
+  color: white;
+  font-size: 2rem;
+  border: 3px solid rgb(185, 185, 185);
+  background-color: #3b3b3b;
+  border-radius: 1rem;
+  width: 18rem;
+  height: 10rem;
+
+  box-shadow: 2px 2px 10px 2px rgba(22, 22, 22, 0.555);
+  cursor: pointer;
+  font-family: inherit;
+  z-index: 10;
+}
+
+.create-todo-short span {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.create-todo-short:hover {
+  background-color: #000000;
+}
+
+.cts-btn {
+  position: absolute;
+  bottom: 10%;
+  right: -5%;
+}
+
+/****** ADD TASK WINDOW *******/
+.create-todo-full {
+  color: white;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(26, 25, 25, 0.836);
+  z-index: 999;
+  padding-top: 10rem;
+}
+
+.ctf-div {
+  padding: 2rem 5rem;
+  width: 40%;
+  height: 80%;
+  margin: auto;
+  background-color: #3b3b3bc0;
+  border: 2px solid white;
+  border-radius: 2rem;
+  z-index: 9999;
+}
+
+.heading-two {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+form label {
+  font-size: 2rem;
+}
+
+#description {
+  color: white;
+  margin-top: 1rem;
+  width: 100%;
+  background-color: #302e2e;
+  margin-bottom: 5rem;
+}
+
+#category {
+  margin-top: 1rem;
+  width: 20rem;
+  height: 3rem;
+  background-color: #272626;
+  color: white;
+}
+
+.form-cat-date {
+  margin-bottom: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#date {
+  margin-top: 1rem;
+  width: 20rem;
+  height: 3rem;
+}
+
+.button-div {
+  width: 100%;
+  height: 20rem;
+  margin-top: 10rem;
+  display: flex;
+  gap: 5rem;
+  padding-left: 40%;
+  justify-content: space-between;
+}
+
+.close-btn {
+  margin-top: 5rem;
+  padding: 1rem;
+  color: white;
+  font-size: 1.5rem;
+  border: 2px solid rgba(185, 185, 185, 0.603);
+  background-color: #3b3b3b00;
+  border-radius: 1rem;
+  width: 9rem;
+  height: 5rem;
+
+  box-shadow: 2px 2px 10px 2px rgba(22, 22, 22, 0.555);
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.hidden {
+  display: none;
+}
