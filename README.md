@@ -10,8 +10,8 @@ This is a simple TODO App developed with NodeJS, MongoDB.
 ### Screenshot
 
 ![](assets/images/1.png)
-![](assets/images/3.png)
 ![](assets/images/2.png)
+![](assets/images/3.png)
 
 ### Built with
 

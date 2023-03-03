@@ -128,9 +128,12 @@ main {
   list-style: none;
 }
 
+.check-box-create {
+  margin: auto 2rem;
+}
+
 .check-box {
   margin: auto 2rem;
-  background-color: #2b3357;
 }
 
 .list-text {
