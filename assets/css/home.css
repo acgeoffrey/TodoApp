@@ -39,11 +39,11 @@ header div {
 /******* TODO Section *******/
 main {
   color: white;
-  width: 70%;
+  width: 60%;
   height: 90%;
   margin: 0 auto;
-  background: linear-gradient(to bottom, #232526, #37383a);
-  border-radius: 1.5rem;
+
+  border-radius: 1rem;
   position: absolute;
   top: 13%;
   left: 50%;
@@ -53,25 +53,28 @@ main {
 .todo-content-div {
   width: 100%;
   height: 100%;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   font-size: 2rem;
-  overflow: scroll;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
-.todo-content-div::-webkit-scrollbar {
+.main-todo-list::-webkit-scrollbar {
   display: none;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
-.todo-content-div {
+.main-todo-list {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
 
 .todo-content-div li {
+  background-color: rgb(37, 39, 60);
   display: flex;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.466);
+}
+
+.todo-content-div-list {
+  border-bottom: 2px solid rgba(128, 128, 128, 0.815);
 }
 
 .todo-content {
@@ -83,6 +86,28 @@ main {
   justify-content: space-between;
   align-content: center;
   gap: 2rem;
+}
+
+.create-todo {
+  position: sticky;
+  top: 0px;
+  height: 8rem;
+  border: none;
+  margin-bottom: 2rem;
+  color: rgb(128, 128, 128);
+  border-radius: 1rem;
+  align-items: center;
+}
+
+.main-todo-list {
+  position: fixed;
+  top: 10rem;
+  height: 80%;
+  width: 100%;
+  background-color: rgb(37, 39, 60);
+  border-radius: 1rem;
+  overflow: scroll;
+  margin-bottom: 2rem;
 }
 
 .des-date {
@@ -105,6 +130,7 @@ main {
 
 .check-box {
   margin: auto 2rem;
+  background-color: #2b3357;
 }
 
 .list-text {

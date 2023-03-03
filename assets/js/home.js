@@ -2,7 +2,7 @@
 console.log("Script is running");
 
 //Open add task window
-document.querySelector(".cts-btn").addEventListener("click", function () {
+document.querySelector(".cntd").addEventListener("click", function () {
   document.querySelector(".create-todo-full").classList.toggle("hidden");
 });
 
